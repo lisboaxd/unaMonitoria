@@ -30,6 +30,12 @@
 	<link rel="stylesheet" href="assets/css/material.min.css">
 	<link rel="stylesheet" href="assets/css/estilo.css">
 	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+	<!--getmdl-select-->   
+	<link rel="stylesheet" href="./assets/css/getmdl-select-master/getmdl-select.min.css">
+	<script defer src="./assets/css/getmdl-select-master/getmdl-select.min.js"></script>
+
+
 </head>
 <body>
 	
@@ -37,14 +43,19 @@
 	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
 	  <header class="mdl-layout__header">
 	    <div class="mdl-layout__header-row">
-	      <span class="mdl-layout-title">Filtrar monitorias</span>
+	      <span class="mdl-layout-title" id="span_filtrar">Filtrar monitorias</span>
 	      <div class="mdl-layout-spacer"></div>
-	      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
-	        <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
-	          <i class="material-icons">search</i>
-	        </label>
-	        <div class="mdl-textfield__expandable-holder">
-	          <input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp">
+	      <div class="mdl-textfield mdl-js-textfield mdl-textfield mdl-textfield--floating-label mdl-textfield--align-right">
+	        <div class="mdl-textfield mdl-js-textfield getmdl-select">
+	        	<input class="mdl-textfield__input" value="" id="fixed-header-drawer-exp" readonly/>
+	        	<input value="" type="hidden" name="filtro"/>
+	        	<label class="mdl-textfield__label" for="filtro">Filtre a matéria</label>
+	        	<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="filtro">
+	        		<li class="mdl-menu__item" data-val="estat">Estatística</li>
+	        		<li class="mdl-menu__item" data-val="calculo">Cálculo</li>
+	        		<li class="mdl-menu__item" data-val="parad">Paradigmas</li>
+	        		<li class="mdl-menu__item" data-val="redes">Redes</li>
+	        	</ul>
 	        </div>
 	      </div>
 	    </div>
@@ -60,7 +71,6 @@
 	      <a class="mdl-navigation__link" href="versao.html">Versão 1.1.0</a>      
 	    </nav>
 	  </div>
-
 	  <!-- MAIN -->
 	  <main class="mdl-layout__content">
 	  	<dialog class="mdl-dialog">
@@ -175,7 +185,7 @@
 
 	  <!-- FOOTER -->
 		<footer class="mdl-mini-footer">
-		  <div class="mdl-mini-footer__right-section">
+		  <div">
 		    <div class="mdl-logo">Monitoria UNA</div>
 		    <ul class="mdl-mini-footer__link-list mdl-cell--hide-tablet	mdl-cell--hide-phone">
 		      <li>Sistemas de Informação, 2018.</li>
