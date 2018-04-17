@@ -16,3 +16,17 @@
 	width: 50ox;
 	height: 64px;
 }
+.mdl-mini-footer{
+    justify-content: center;
+}
+.mdl-textfield__label[for='filtro']{
+    color:white;
+}
+@media screen and (max-width: 500px) {
+    .mdl-mini-footer{
+        padding: 0px 0px;
+    }
+    #span_filtrar{
+        display: none;
+    }
+}
