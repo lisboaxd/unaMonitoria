@@ -35,8 +35,6 @@
 	<!--getmdl-select-->   
 	<link rel="stylesheet" href="./assets/css/getmdl-select-master/getmdl-select.min.css">
 	<script defer src="./assets/css/getmdl-select-master/getmdl-select.min.js"></script>
-
-
 </head>
 <body>
 	<dialog class="mdl-dialog">
@@ -93,7 +91,7 @@
 			<!-- LOGO -->
 			<span class="mdl-layout-title"><a href="index.html"><img src="assets/pics/logo.png" alt="" width="100%" height="100%"></a></span>
 			<!-- LOGO -->
-	    <?php 
-	    include('./modulos/menu.php');
-	     ?>
+<?php 
+include('./modulos/menu.php');
+ ?>
 		</div>
