@@ -1,63 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-
-	<title>Monitoria UNA</title>
-	
-
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
-
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
-    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
-
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileColor" content="#3372DF">
-
-    <link rel="shortcut icon" href="assets/pics/favicon.ico">
-
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link rel="stylesheet" href="assets/css/material.min.css">
-	<link rel="stylesheet" href="assets/css/estilo.css">
-	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-</head>
-<body>
-	
-	<!-- MDL LAYOUT -->	
-	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
-	  <header class="mdl-layout__header">
-	    <div class="mdl-layout__header-row">
-	      <span class="mdl-layout-title">Filtrar monitorias</span>
-	      <div class="mdl-layout-spacer"></div>
-	      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
-	        <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
-	          <i class="material-icons">search</i>
-	        </label>
-	        <div class="mdl-textfield__expandable-holder">
-	          <input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp">
-	        </div>
-	      </div>
-	    </div>
-	  </header>
-	  <div class="mdl-layout__drawer">
-	    <!-- LOGO -->
-	    <span class="mdl-layout-title"><a href="index.html"><img src="assets/pics/logo.png" alt="" width="100%" height="100%"></a></span>
-	    <!-- LOGO -->
-	    <?php 
-	    include('./modulos/menu.php');
-	     ?>
-	  </div>
-
+<?php 
+include('./modulos/header.php');
+ ?>
 	  <!-- MAIN -->
 	  <main class="mdl-layout__content">
 	  	<dialog class="mdl-dialog">
@@ -168,33 +111,6 @@
 	    <!-- CONTENT -->
 	  </main>
 	  <!-- MAIN -->
-
-	  <!-- FOOTER -->
-		<footer class="mdl-mini-footer">
-		  <div class="mdl-mini-footer__right-section">
-		    <div class="mdl-logo">Monitoria UNA</div>
-		    <ul class="mdl-mini-footer__link-list mdl-cell--hide-tablet	mdl-cell--hide-phone">
-		      <li>Sistemas de Informação, 2018.</li>
-		      <li><a href="#">Privacidade & Termos</a></li>
-		    </ul>
-		  </div>
-		</footer>
-	  <!-- FOOTER -->
-	</div>
-	<!-- MDL LAYOUT -->	
-
-<script>
-	var dialog = document.querySelector('dialog');
-	var showDialogButton = document.querySelector('#show-dialog');
-	if (! dialog.showModal) {
-		dialogPolyfill.registerDialog(dialog);
-	}
-	showDialogButton.addEventListener('click', function() {
-		dialog.showModal();
-	});
-	dialog.querySelector('.close').addEventListener('click', function() {
-		dialog.close();
-	});
-</script>
-</body>
-</html>
+<?php 
+include('./modulos/footer.php');
+ ?>
